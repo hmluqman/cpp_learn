@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(cpp_eleven)
+project(learn_cpp)
 
 ###########
 ## Build ##
@@ -22,12 +22,10 @@ if(CMAKE_VERSION VERSION_LESS "3.1")
     set(CMAKE_CXX_STANDARD 11)
 endif()
 
-if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 6.0)
-    set (CMAKE_CXX_STANDARD 14)
+if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 8.0)
+    set (CMAKE_CXX_STANDARD 17)
 else()
     set (CMAKE_CXX_STANDARD 11)
 endif()
 
-add_executable(${PROJECT_NAME} src/custom_unorder_set1.cpp)
-add_executable(custom2 src/custom_unorder_set2.cpp)
-add_executable(algorithm src/algorithm.cpp)
+add_subdirectory(src)
